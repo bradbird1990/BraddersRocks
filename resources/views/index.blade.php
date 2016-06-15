@@ -17,7 +17,7 @@
 <body>
 
     <div ui-view="header"></div>
-    <div ui-view="main"></div>
+    <div ui-view="main" style="height: 100%"></div>
     <div ui-view="footer"></div>
 
     <script src="{!! elixir('js/vendor.js') !!}"></script>
@@ -25,10 +25,10 @@
     <script src="{!! elixir('js/app.js') !!}"></script>
 
     {{--livereload--}}
-    @if ( env('APP_ENV') === 'local' )
+    {{--@if ( env('APP_ENV') === 'local' )
     <script type="text/javascript">
         document.write('<script src="'+ location.protocol + '//' + (location.host.split(':')[0] || 'localhost') +':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
     </script>
-    @endif
+    @endif--}}
 </body>
 </html>
