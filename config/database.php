@@ -1,5 +1,27 @@
 <?php
 
+/**
+ * Set the database defaults to the environment file if they exist.
+ */
+$defaults = array(
+    'host' => env('DB_HOST', 'localhost'),
+    'database' => env('DB_NAME', 'homestead'),
+    'username' => env('DB_USER', 'homestead'),
+    'password' => env('DB_PASS', 'secret')
+);
+
+/**
+ * When on a Heroku server and the CLEARDB resource is being used then break down the
+ * environment variable and replace the default database environment variables.
+ */
+if (getenv("CLEARDB_DATABASE_URL")) {
+    $params = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $defaults['host'] = $params['host'];
+    $defaults['username'] = $params['user'];
+    $defaults['password'] = $params['pass'];
+    $defaults['database'] = substr($params["path"], 1);
+}
+
 return [
 
     /*
@@ -54,11 +76,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'port'      => env('DB_PORT', '3306'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => env('DB_HOST', $defaults['host']),
+            'database'  => env('DB_DATABASE', $defaults['database']),
+            'username'  => env('DB_USERNAME', $defaults['username']),
+            'password'  => env('DB_PASSWORD', $defaults['password']),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
