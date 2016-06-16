@@ -10,7 +10,6 @@
     "karma-jasmine": "^0.3.8",
     "karma-ngannotate-preprocessor": "^0.1.2",
     "karma-phantomjs-launcher": "^1.0.0",
-    "laravel-elixir-karma": "^0.2.2",
     "ng-describe": "^1.8.0",
     "phantomjs-prebuilt": "^2.1.6",
     "stringify": "^3.1.0",
