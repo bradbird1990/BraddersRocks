@@ -20,9 +20,7 @@ install:
 - bower install
 before_script:
 - mysql -e 'create database braddersrocks;'
-- export DB_DATABASE='braddersrocks'
-- export DB_USERNAME=travis
-- export DB_PASSWORD=
+- cp  .env.travis .env
 - php artisan migrate --seed --force
 - php artisan key:generate
 script:
