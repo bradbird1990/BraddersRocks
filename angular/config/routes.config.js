@@ -29,6 +29,14 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('app.portfolio', {
+            url: '/portfolio',
+            views: {
+                'main@': {
+                    templateUrl: getView('portfolio')
+                }
+            }
+        })
         .state('app.login', {
 			url: '/login',
 			views: {

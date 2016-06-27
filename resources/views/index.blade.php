@@ -10,16 +10,14 @@
 
     <title>Solo App and Web Developer from London | Bradders.rocks</title>
 
-
     <!--[if lte IE 10]>
     <script type="text/javascript">document.location.href = '/unsupported-browser'</script>
     <![endif]-->
 </head>
-<body>
-
-    <div ui-view="header"></div>
+<body ng-class="$root.stateNameAsClass">
+    <div ui-view="header" ng-if="$root.stateName != 'app.landing'"></div>
     <div ui-view="main" style="height: 100%"></div>
-    <div ui-view="footer"></div>
+    <div ui-view="footer" ng-if="$root.stateName != 'app.landing'"></div>
 
     <script src="{!! elixir('js/vendor.js') !!}"></script>
     <script src="{!! elixir('js/partials.js') !!}"></script>
