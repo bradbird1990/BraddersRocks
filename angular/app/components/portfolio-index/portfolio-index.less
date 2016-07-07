@@ -1,16 +1,19 @@
 portfolio-index {
     .masonry {
-        margin: 0.5em;
+        margin: 0;
         padding: 0;
-        -moz-column-gap: 1.5em;
-        -webkit-column-gap: 1.5em;
-        column-gap: 0.5em;
+        -moz-column-gap: 0;
+        -webkit-column-gap: 0;
+        column-gap: 0;
     }
     .item {
         background-color: #eee;
+        background-size: cover;
+        background-position: center;
         display: inline-block;
-        margin: 0 0 1em;
+        margin: 0 0 -3px;
         width: 100%;
+        height: 150px;
     }
     @media only screen and (min-width: 400px) {
         .masonry {

@@ -14,7 +14,7 @@ class PortfolioIndexController {
 
     getPortfolio() {
         this.API.all('portfolio.json').customGET().then((response) => {
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 20; i++) {
                 this.portfolio.push(angular.copy(response.data[0]));
             }
         }, () => {

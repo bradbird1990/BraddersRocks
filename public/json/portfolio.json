@@ -1,20 +1,21 @@
 {
     "data": [{
-        "name": "",
-        "display_name": "",
-        "thumbnail_path": "",
+        "name": "item",
+        "display_name": "An Item",
+        "thumbnail_path": "/img/portfolio/test/thumbnail.png",
+        "description": "This is a description about said item.",
         "images": [{
-            "caption": "",
-            "image_path": ""
+            "caption": "A mighty fine image this twas.",
+            "image_path": "/img/portfolio/test/image01.png"
         }, {
-            "caption": "",
-            "image_path": ""
+            "caption": "Sometimes dogs are the bane of a co-existent society.",
+            "image_path": "/img/portfolio/test/image02.png"
         }, {
-            "caption": "",
-            "image_path": ""
+            "caption": "When life gives you lemons; lick that zestyness.",
+            "image_path": "/img/portfolio/test/image03.png"
         }, {
-            "caption": "",
-            "image_path": ""
+            "caption": "It's currently 1am and I can't think of another caption.",
+            "image_path": "/img/portfolio/test/image04.png"
         }]
     }]
 }
