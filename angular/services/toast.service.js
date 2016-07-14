@@ -38,7 +38,7 @@ export class ToastService {
         );
     }
 
-    genericError(content) {
+    genericError() {
         this.error('Sorry, there was a problem loading this page properly');
     }
 }

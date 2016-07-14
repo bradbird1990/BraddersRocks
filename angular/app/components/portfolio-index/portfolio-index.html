@@ -1,5 +1,6 @@
 <div class="masonry">
     <div class="item"
-        ng-repeat="item in vm.portfolio"
-        style="background-image: url('{{item.thumbnail_path}}')"></div>
+         ng-repeat="item in vm.portfolio"
+         ng-click="vm.getLinkTarget(item)"
+         style="background-image: url('{{item.images[0].image_path}}')"></div>
 </div>
